@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23411A7722A1E09700A7D429 /* DrawerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A7522A1E09700A7D429 /* DrawerTransitionDelegate.swift */; };
+		23411A7822A1E09700A7D429 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A7622A1E09700A7D429 /* DrawerPresentationController.swift */; };
+		23411A7B22A1E20D00A7D429 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A7A22A1E20D00A7D429 /* LocationsListViewController.swift */; };
+		23411A7E22A1E2B300A7D429 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A7C22A1E2B300A7D429 /* UIView+Extensions.swift */; };
+		23411A7F22A1E2B300A7D429 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A7D22A1E2B300A7D429 /* UIWindow+Extensions.swift */; };
+		23411A8322A1E59000A7D429 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8222A1E59000A7D429 /* LocationData.swift */; };
+		23411A8522A1E5C100A7D429 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8422A1E5C100A7D429 /* LocationsTableViewCell.swift */; };
+		23411A8722A1E6FB00A7D429 /* LocationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23411A8622A1E6FB00A7D429 /* LocationsList.storyboard */; };
+		23411A8922A1E94800A7D429 /* DrawerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8822A1E94800A7D429 /* DrawerUtils.swift */; };
 		2347CDA7229F36590097F51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA6229F36590097F51F /* AppDelegate.swift */; };
-		2347CDA9229F36590097F51F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA8229F36590097F51F /* ViewController.swift */; };
+		2347CDA9229F36590097F51F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA8229F36590097F51F /* MapViewController.swift */; };
 		2347CDAC229F36590097F51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2347CDAA229F36590097F51F /* Main.storyboard */; };
 		2347CDAE229F365A0097F51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2347CDAD229F365A0097F51F /* Assets.xcassets */; };
 		2347CDB1229F365A0097F51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2347CDAF229F365A0097F51F /* LaunchScreen.storyboard */; };
@@ -34,9 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23411A7522A1E09700A7D429 /* DrawerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerTransitionDelegate.swift; sourceTree = "<group>"; };
+		23411A7622A1E09700A7D429 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
+		23411A7A22A1E20D00A7D429 /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
+		23411A7C22A1E2B300A7D429 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		23411A7D22A1E2B300A7D429 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		23411A8222A1E59000A7D429 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		23411A8422A1E5C100A7D429 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
+		23411A8622A1E6FB00A7D429 /* LocationsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationsList.storyboard; sourceTree = "<group>"; };
+		23411A8822A1E94800A7D429 /* DrawerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerUtils.swift; sourceTree = "<group>"; };
 		2347CDA3229F36590097F51F /* SixtCarFinderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtCarFinderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2347CDA6229F36590097F51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2347CDA8229F36590097F51F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2347CDA8229F36590097F51F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2347CDAB229F36590097F51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2347CDAD229F365A0097F51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2347CDB0229F365A0097F51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23411A7422A1E08400A7D429 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				23411A7622A1E09700A7D429 /* DrawerPresentationController.swift */,
+				23411A7522A1E09700A7D429 /* DrawerTransitionDelegate.swift */,
+				23411A8822A1E94800A7D429 /* DrawerUtils.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		23411A7922A1E1E000A7D429 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2347CDA8229F36590097F51F /* MapViewController.swift */,
+				23411A7A22A1E20D00A7D429 /* LocationsListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		2347CD9A229F36590097F51F = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +167,8 @@
 			children = (
 				2347CDAA229F36590097F51F /* Main.storyboard */,
 				2347CDAF229F365A0097F51F /* LaunchScreen.storyboard */,
+				23411A8622A1E6FB00A7D429 /* LocationsList.storyboard */,
+				23411A8422A1E5C100A7D429 /* LocationsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,7 +185,8 @@
 		2347CDD6229F36760097F51F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2347CDA8229F36590097F51F /* ViewController.swift */,
+				23411A7922A1E1E000A7D429 /* ViewControllers */,
+				23411A7422A1E08400A7D429 /* Presentation */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,6 +210,7 @@
 		2347CDD9229F36A00097F51F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23411A8222A1E59000A7D429 /* LocationData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +218,8 @@
 		2347CDDA229F36BA0097F51F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				23411A7C22A1E2B300A7D429 /* UIView+Extensions.swift */,
+				23411A7D22A1E2B300A7D429 /* UIWindow+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,6 +330,7 @@
 			files = (
 				2347CDB1229F365A0097F51F /* LaunchScreen.storyboard in Resources */,
 				2347CDAE229F365A0097F51F /* Assets.xcassets in Resources */,
+				23411A8722A1E6FB00A7D429 /* LocationsList.storyboard in Resources */,
 				2347CDAC229F36590097F51F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +356,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2347CDA9229F36590097F51F /* ViewController.swift in Sources */,
+				23411A8322A1E59000A7D429 /* LocationData.swift in Sources */,
+				23411A7E22A1E2B300A7D429 /* UIView+Extensions.swift in Sources */,
+				2347CDA9229F36590097F51F /* MapViewController.swift in Sources */,
+				23411A8522A1E5C100A7D429 /* LocationsTableViewCell.swift in Sources */,
+				23411A8922A1E94800A7D429 /* DrawerUtils.swift in Sources */,
+				23411A7B22A1E20D00A7D429 /* LocationsListViewController.swift in Sources */,
+				23411A7822A1E09700A7D429 /* DrawerPresentationController.swift in Sources */,
 				2347CDA7229F36590097F51F /* AppDelegate.swift in Sources */,
+				23411A7F22A1E2B300A7D429 /* UIWindow+Extensions.swift in Sources */,
+				23411A7722A1E09700A7D429 /* DrawerTransitionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
