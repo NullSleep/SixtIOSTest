@@ -16,9 +16,8 @@ public final class NetworkHandler {
   
   // MARK: - Class Constructors
   public static let shared: NetworkHandler = {
-    let file = Bundle.main.path(forResource: "ServerEnvironments", ofType: "plist")!
-    let dictionary = NSDictionary(contentsOfFile: file)!
-    let urlString = dictionary["base_url"] as! String
+    let serverInfo = getServerInfo()
+    let urlString = serverInfo["base_url"] as! String
     let url = URL(string: urlString)!
     return NetworkHandler(baseURL: url)
   }()
@@ -26,6 +25,13 @@ public final class NetworkHandler {
   // MARK: - Object Lifecycle
   private init(baseURL: URL) {
     self.baseURL = baseURL
+  }
+  
+  // MARK: - Private methods
+  private static func getServerInfo() -> NSDictionary {
+    let file = Bundle.main.path(forResource: "ServerEnvironments", ofType: "plist")!
+    let dictionary = NSDictionary(contentsOfFile: file)!
+    return dictionary
   }
   
   // MARK: - Requests
@@ -39,9 +45,8 @@ public final class NetworkHandler {
       DispatchQueue.main.async { _failure(error) }
     }
     
-    let file = Bundle.main.path(forResource: "ServerEnvironments", ofType: "plist")!
-    let dictionary = NSDictionary(contentsOfFile: file)!
-    let carsEndpoint = dictionary["cars_enpoint"] as! String
+    let serverInfo = NetworkHandler.getServerInfo()
+    let carsEndpoint = serverInfo["cars_enpoint"] as! String
     
     let url = baseURL.appendingPathComponent(carsEndpoint)
     
