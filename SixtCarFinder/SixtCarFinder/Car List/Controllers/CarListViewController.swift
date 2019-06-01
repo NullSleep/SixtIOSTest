@@ -9,11 +9,13 @@
 import UIKit
 
 class CarListViewController: UIViewController {
-
+  
+  // MARK: - IBOutlets
   @IBOutlet weak var handleView: UIView!
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var tableView: UITableView!
   
+  // MARK: - View life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpViews()
@@ -30,7 +32,9 @@ class CarListViewController: UIViewController {
   }
 }
 
+// MARK: - UITableViewDataSource
 extension CarListViewController: UITableViewDataSource {
+  
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -50,7 +54,9 @@ extension CarListViewController: UITableViewDataSource {
   }
 }
 
+// MARK: - UITableViewDelegate
 extension CarListViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80
   }
