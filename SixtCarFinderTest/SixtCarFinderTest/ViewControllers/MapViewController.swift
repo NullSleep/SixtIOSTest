@@ -9,11 +9,15 @@
 import UIKit
 
 class MapViewController: UIViewController {
+  
+  // MARK: - Injections
+  internal var networkHandler = NetworkHandler.shared
 
   private var animator: DrawerTransitionDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    loadCarList()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -29,3 +33,20 @@ class MapViewController: UIViewController {
   }
 }
 
+// MARK: - Private mehtods
+extension MapViewController {
+  
+  private func loadCarList() {
+    
+    networkHandler.getCarList(
+      success: { [weak self] carList in
+        
+        //guard let strongSelf = self else { return }
+        print("\(carList)")
+        
+      }, failure: { [weak self] error in
+        print("Car list download failed: \(error)")
+        //guard let strongSelf = self else { return }
+    })
+  }
+}

@@ -19,6 +19,7 @@
 		23411A8E22A1EF2000A7D429 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8D22A1EF2000A7D429 /* NetworkHandler.swift */; };
 		23411A9022A1F00500A7D429 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8F22A1F00500A7D429 /* NetworkError.swift */; };
 		23411A9222A1F13A00A7D429 /* CarsReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A9122A1F13A00A7D429 /* CarsReponse.swift */; };
+		23411A9722A22AE400A7D429 /* ServerEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23411A9622A22AE400A7D429 /* ServerEnvironments.plist */; };
 		2347CDA7229F36590097F51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA6229F36590097F51F /* AppDelegate.swift */; };
 		2347CDA9229F36590097F51F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA8229F36590097F51F /* MapViewController.swift */; };
 		2347CDAC229F36590097F51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2347CDAA229F36590097F51F /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		23411A8D22A1EF2000A7D429 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkHandler.swift; path = SixtCarFinderTest/Presentation/NetworkHandler.swift; sourceTree = SOURCE_ROOT; };
 		23411A8F22A1F00500A7D429 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23411A9122A1F13A00A7D429 /* CarsReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsReponse.swift; sourceTree = "<group>"; };
+		23411A9622A22AE400A7D429 /* ServerEnvironments.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ServerEnvironments.plist; sourceTree = "<group>"; };
 		2347CDA3229F36590097F51F /* SixtCarFinderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtCarFinderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2347CDA6229F36590097F51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2347CDA8229F36590097F51F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,32 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		23411A9322A22A1500A7D429 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				23411A9522A22A4500A7D429 /* Resources */,
+				23411A9422A22A3200A7D429 /* Supporting Files */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		23411A9422A22A3200A7D429 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2347CDB2229F365A0097F51F /* Info.plist */,
+				23411A9622A22AE400A7D429 /* ServerEnvironments.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23411A9522A22A4500A7D429 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2347CDAD229F365A0097F51F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2347CD9A229F36590097F51F = {
 			isa = PBXGroup;
 			children = (
@@ -140,13 +168,13 @@
 		2347CDA5229F36590097F51F /* SixtCarFinderTest */ = {
 			isa = PBXGroup;
 			children = (
+				23411A9322A22A1500A7D429 /* App */,
 				2347CDD8229F36970097F51F /* Networking */,
 				2347CDD5229F366B0097F51F /* Application */,
 				2347CDD7229F36820097F51F /* Model */,
 				2347CDD4229F36650097F51F /* View */,
 				2347CDD6229F36760097F51F /* Controller */,
 				2347CDDA229F36BA0097F51F /* Utils */,
-				2347CDB2229F365A0097F51F /* Info.plist */,
 			);
 			path = SixtCarFinderTest;
 			sourceTree = "<group>";
@@ -183,7 +211,6 @@
 		2347CDD5229F366B0097F51F /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				2347CDAD229F365A0097F51F /* Assets.xcassets */,
 				2347CDA6229F36590097F51F /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -331,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2347CDB1229F365A0097F51F /* LaunchScreen.storyboard in Resources */,
+				23411A9722A22AE400A7D429 /* ServerEnvironments.plist in Resources */,
 				2347CDAE229F365A0097F51F /* Assets.xcassets in Resources */,
 				23411A8722A1E6FB00A7D429 /* LocationsList.storyboard in Resources */,
 				2347CDAC229F36590097F51F /* Main.storyboard in Resources */,
@@ -546,7 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SixtCarFinderTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SixtCarFinderTest/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SixtCarFinderTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SixtCarFinderTest/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

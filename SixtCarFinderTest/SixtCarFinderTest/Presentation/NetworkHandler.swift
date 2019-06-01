@@ -8,19 +8,19 @@
 
 import Foundation
 
-public final class NetworkClient {
+public final class NetworkHandler {
   
   // MARK: - Instance Properties
   internal let baseURL: URL
   internal let session = URLSession.shared
   
   // MARK: - Class Constructors
-  public static let shared: NetworkClient = {
+  public static let shared: NetworkHandler = {
     let file = Bundle.main.path(forResource: "ServerEnvironments", ofType: "plist")!
     let dictionary = NSDictionary(contentsOfFile: file)!
-    let urlString = dictionary["service_url"] as! String
+    let urlString = dictionary["base_url"] as! String
     let url = URL(string: urlString)!
-    return NetworkClient(baseURL: url)
+    return NetworkHandler(baseURL: url)
   }()
   
   // MARK: - Object Lifecycle
@@ -28,18 +28,24 @@ public final class NetworkClient {
     self.baseURL = baseURL
   }
   
-  public func getProducts(success _success: @escaping (CarsReponse) -> Void,
+  // MARK: - Requests
+  public func getCarList(success _success: @escaping ([CarItem]) -> Void,
                           failure _failure: @escaping (NetworkError) -> Void) {
     
-    let success: (CarsReponse) -> Void = { products in
-      DispatchQueue.main.async { _success(products) }
+    let success: ([CarItem]) -> Void = { cars in
+      DispatchQueue.main.async { _success(cars) }
     }
     let failure: (NetworkError) -> Void = { error in
       DispatchQueue.main.async { _failure(error) }
     }
     
-    let task = session.dataTask(with: baseURL, completionHandler: { (data, response, error) in
-      
+    let file = Bundle.main.path(forResource: "ServerEnvironments", ofType: "plist")!
+    let dictionary = NSDictionary(contentsOfFile: file)!
+    let carsEndpoint = dictionary["cars_enpoint"] as! String
+    
+    let url = baseURL.appendingPathComponent(carsEndpoint)
+    
+    let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
       guard let httpResponse = response as? HTTPURLResponse,
         httpResponse.statusCode.isSuccessHTTPCode,
         let data = data else {
@@ -52,7 +58,7 @@ public final class NetworkClient {
       }
       
       do {
-        let carList = try JSONDecoder().decode(CarsReponse.self, from: data)
+        let carList = try JSONDecoder().decode([CarItem].self, from: data)
         success(carList)
       } catch {
         failure(NetworkError(error: error))
