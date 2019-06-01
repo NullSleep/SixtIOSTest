@@ -16,6 +16,9 @@
 		23411A8522A1E5C100A7D429 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8422A1E5C100A7D429 /* LocationsTableViewCell.swift */; };
 		23411A8722A1E6FB00A7D429 /* LocationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23411A8622A1E6FB00A7D429 /* LocationsList.storyboard */; };
 		23411A8922A1E94800A7D429 /* DrawerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8822A1E94800A7D429 /* DrawerUtils.swift */; };
+		23411A8E22A1EF2000A7D429 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8D22A1EF2000A7D429 /* NetworkHandler.swift */; };
+		23411A9022A1F00500A7D429 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A8F22A1F00500A7D429 /* NetworkError.swift */; };
+		23411A9222A1F13A00A7D429 /* CarsReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411A9122A1F13A00A7D429 /* CarsReponse.swift */; };
 		2347CDA7229F36590097F51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA6229F36590097F51F /* AppDelegate.swift */; };
 		2347CDA9229F36590097F51F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347CDA8229F36590097F51F /* MapViewController.swift */; };
 		2347CDAC229F36590097F51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2347CDAA229F36590097F51F /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 		23411A8422A1E5C100A7D429 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
 		23411A8622A1E6FB00A7D429 /* LocationsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationsList.storyboard; sourceTree = "<group>"; };
 		23411A8822A1E94800A7D429 /* DrawerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerUtils.swift; sourceTree = "<group>"; };
+		23411A8D22A1EF2000A7D429 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkHandler.swift; path = SixtCarFinderTest/Presentation/NetworkHandler.swift; sourceTree = SOURCE_ROOT; };
+		23411A8F22A1F00500A7D429 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		23411A9122A1F13A00A7D429 /* CarsReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsReponse.swift; sourceTree = "<group>"; };
 		2347CDA3229F36590097F51F /* SixtCarFinderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtCarFinderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2347CDA6229F36590097F51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2347CDA8229F36590097F51F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 		2347CDA5229F36590097F51F /* SixtCarFinderTest */ = {
 			isa = PBXGroup;
 			children = (
+				2347CDD8229F36970097F51F /* Networking */,
 				2347CDD5229F366B0097F51F /* Application */,
 				2347CDD7229F36820097F51F /* Model */,
 				2347CDD4229F36650097F51F /* View */,
@@ -194,8 +201,9 @@
 		2347CDD7229F36820097F51F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2347CDD9229F36A00097F51F /* Models */,
-				2347CDD8229F36970097F51F /* Networking */,
+				23411A8222A1E59000A7D429 /* LocationData.swift */,
+				23411A8F22A1F00500A7D429 /* NetworkError.swift */,
+				23411A9122A1F13A00A7D429 /* CarsReponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,16 +211,10 @@
 		2347CDD8229F36970097F51F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				23411A8D22A1EF2000A7D429 /* NetworkHandler.swift */,
 			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		2347CDD9229F36A00097F51F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				23411A8222A1E59000A7D429 /* LocationData.swift */,
-			);
-			path = Models;
+			name = Networking;
+			path = Model/Networking;
 			sourceTree = "<group>";
 		};
 		2347CDDA229F36BA0097F51F /* Utils */ = {
@@ -357,13 +359,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				23411A8322A1E59000A7D429 /* LocationData.swift in Sources */,
+				23411A8E22A1EF2000A7D429 /* NetworkHandler.swift in Sources */,
 				23411A7E22A1E2B300A7D429 /* UIView+Extensions.swift in Sources */,
 				2347CDA9229F36590097F51F /* MapViewController.swift in Sources */,
+				23411A9222A1F13A00A7D429 /* CarsReponse.swift in Sources */,
 				23411A8522A1E5C100A7D429 /* LocationsTableViewCell.swift in Sources */,
 				23411A8922A1E94800A7D429 /* DrawerUtils.swift in Sources */,
 				23411A7B22A1E20D00A7D429 /* LocationsListViewController.swift in Sources */,
 				23411A7822A1E09700A7D429 /* DrawerPresentationController.swift in Sources */,
 				2347CDA7229F36590097F51F /* AppDelegate.swift in Sources */,
+				23411A9022A1F00500A7D429 /* NetworkError.swift in Sources */,
 				23411A7F22A1E2B300A7D429 /* UIWindow+Extensions.swift in Sources */,
 				23411A7722A1E09700A7D429 /* DrawerTransitionDelegate.swift in Sources */,
 			);
