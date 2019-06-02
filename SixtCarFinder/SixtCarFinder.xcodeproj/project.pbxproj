@@ -32,7 +32,7 @@
 		23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2B22A35B3300A7D429 /* CarMarkerView.swift */; };
 		23411B2E22A35B9B00A7D429 /* CarLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */; };
 		23411B3322A42F5300A7D429 /* TouchForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3222A42F5300A7D429 /* TouchForwardingView.swift */; };
-		885C41201F69071B87A8199D /* libPods-SixtCarFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75384DDF89CFA019C235FAA9 /* libPods-SixtCarFinder.a */; };
+		670151C21FCD1A88B4973AE5 /* Pods_SixtCarFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A18B28796879A0774EBD10 /* Pods_SixtCarFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A18B28796879A0774EBD10 /* Pods_SixtCarFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixtCarFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23411AA622A2C45E00A7D429 /* SixtCarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtCarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23411AA922A2C45E00A7D429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23411AAE22A2C45E00A7D429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,7 +85,7 @@
 		23411B2B22A35B3300A7D429 /* CarMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkerView.swift; sourceTree = "<group>"; };
 		23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocationAnnotation.swift; sourceTree = "<group>"; };
 		23411B3222A42F5300A7D429 /* TouchForwardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchForwardingView.swift; sourceTree = "<group>"; };
-		75384DDF89CFA019C235FAA9 /* libPods-SixtCarFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SixtCarFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23411B3422A45A1300A7D429 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		845FE675927F781F1D1150BB /* Pods-SixtCarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCarFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder.release.xcconfig"; sourceTree = "<group>"; };
 		D62897FAD42FD60638AE741E /* Pods-SixtCarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCarFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				885C41201F69071B87A8199D /* libPods-SixtCarFinder.a in Frameworks */,
+				670151C21FCD1A88B4973AE5 /* Pods_SixtCarFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +367,8 @@
 		77D1C29B765990F0AC140B47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75384DDF89CFA019C235FAA9 /* libPods-SixtCarFinder.a */,
+				23411B3422A45A1300A7D429 /* libSDWebImage.a */,
+				02A18B28796879A0774EBD10 /* Pods_SixtCarFinder.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -382,6 +384,7 @@
 				23411AA222A2C45E00A7D429 /* Sources */,
 				23411AA322A2C45E00A7D429 /* Frameworks */,
 				23411AA422A2C45E00A7D429 /* Resources */,
+				2A2D4FCCCB7FCD401829D395 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,6 +504,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A2D4FCCCB7FCD401829D395 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A188E68600B3B7621BBCBD15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

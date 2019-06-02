@@ -27,7 +27,7 @@ public struct CarItem: Codable {
   let latitude         : Double
   let longitude        : Double
   let innerCleanliness : String
-  let carImageUrl      : String
+  let carImageUrl      : String?
   
   enum CodingKeys: String, CodingKey {
     case id

@@ -67,8 +67,8 @@ extension MapViewController {
   }
   
   func addLocationsIntoMapView(for carList: [CarItem]) {
-    let validWorks = carList.compactMap { CarLocationAnnotation(for: $0) }
-    carLocations.append(contentsOf: validWorks)
+    let locations = carList.compactMap { CarLocationAnnotation(for: $0) }
+    carLocations.append(contentsOf: locations)
     mapView.addAnnotations(carLocations)
   }
   
