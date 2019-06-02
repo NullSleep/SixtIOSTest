@@ -18,20 +18,28 @@ class CarMarkerView: MKAnnotationView {
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
       
-      let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
-      mapsButton.setBackgroundImage(UIImage(named: "AppIcon"), for: UIControl.State())
+      let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 48, height: 48)))
+      mapsButton.setBackgroundImage(UIImage(named: "Maps-icon"), for: UIControl.State())
       rightCalloutAccessoryView = mapsButton
       
-      if let imageName = carLocation.imageName {
-        image = UIImage(named: imageName)
-      } else {
-        image = nil
-      }
+//      if let imageName = carLocation.carInfo.carImageUrl {
+//        image = UIImage(named: imageName)
+//      } else {
+//        image = UIImage(named: "carIconSmall")
+//      }
+      image = UIImage(named: "carIconSmall")
+      
+      let carInfoText = "Owner: " + carLocation.carInfo.ownerName + "\n"
+        + "Maker: " + carLocation.carInfo.make + "\n"
+        + "Fuel Type: " + carLocation.carInfo.fuelType + "\n"
+        + "Fuel Level: " + carLocation.carInfo.carFuelPercentage + "\n"
+        + "Transmission: " + carLocation.carInfo.carTransmission + "\n"
+        + "Cleanliness: " + carLocation.carInfo.cleanliness
       
       let detailLabel = UILabel()
       detailLabel.numberOfLines = 0
-      detailLabel.font = detailLabel.font.withSize(14)
-      detailLabel.text = carLocation.name
+      detailLabel.font = detailLabel.font.withSize(13)
+      detailLabel.text = carInfoText
       detailCalloutAccessoryView = detailLabel
     }
   }

@@ -11,9 +11,10 @@ import MapKit
 
 class MapViewController: UIViewController {
   
-  // MARK: - Properties
+  // MARK: - Class properties
   private var carLocations: [CarLocationAnnotation] = []
-  private let regionRadius: CLLocationDistance = 9000
+  private let regionRadius: CLLocationDistance = 10000
+  private let initialLocation = CLLocation(latitude: 48.1351, longitude: 11.5820)
   private let locationManager = CLLocationManager()
   
   // MARK: - IBOutlets
@@ -50,12 +51,11 @@ class MapViewController: UIViewController {
   }
 }
 
-// MARK: - Private mehtods
+// MARK: - Private methods
 extension MapViewController {
   
   private func configureMapView() {
     // Set initial location in Munich
-    let initialLocation = CLLocation(latitude: 48.1351, longitude: 11.5820)
     centerMapOnLocation(location: initialLocation)
     mapView.delegate = self
     mapView.register(CarMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
