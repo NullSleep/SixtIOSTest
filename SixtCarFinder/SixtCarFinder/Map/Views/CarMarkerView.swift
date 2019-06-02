@@ -26,7 +26,6 @@ class CarMarkerView: MKAnnotationView {
       } else {
         carImageButton.setBackgroundImage(UIImage(named: "defaultCarImg"), for: UIControl.State())
       }
-      
       carImageButton.layer.cornerRadius = 8.0
       carImageButton.layer.masksToBounds = false
     

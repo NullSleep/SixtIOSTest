@@ -23,7 +23,6 @@
 		23411B0D22A2CC8800A7D429 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B0C22A2CC8800A7D429 /* NetworkHandler.swift */; };
 		23411B0F22A2CCD900A7D429 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B0E22A2CCD900A7D429 /* UIView+Extensions.swift */; };
 		23411B1122A2CD0800A7D429 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1022A2CD0800A7D429 /* UIWindow+Extensions.swift */; };
-		23411B1322A2CD1F00A7D429 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1222A2CD1F00A7D429 /* LocationData.swift */; };
 		23411B1522A2CD3800A7D429 /* CarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1422A2CD3800A7D429 /* CarItem.swift */; };
 		23411B1722A2CD6700A7D429 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1622A2CD6700A7D429 /* NetworkError.swift */; };
 		23411B1B22A2D89400A7D429 /* ServerEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */; };
@@ -76,7 +75,6 @@
 		23411B0C22A2CC8800A7D429 /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		23411B0E22A2CCD900A7D429 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		23411B1022A2CD0800A7D429 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
-		23411B1222A2CD1F00A7D429 /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		23411B1422A2CD3800A7D429 /* CarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarItem.swift; sourceTree = "<group>"; };
 		23411B1622A2CD6700A7D429 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerEnvironments.plist; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */,
-				23411B1222A2CD1F00A7D429 /* LocationData.swift */,
 				23411B1422A2CD3800A7D429 /* CarItem.swift */,
 			);
 			path = Models;
@@ -547,7 +544,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23411B1322A2CD1F00A7D429 /* LocationData.swift in Sources */,
 				23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */,
 				23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */,
 				23411B0A22A2CC2900A7D429 /* DrawerModel.swift in Sources */,
