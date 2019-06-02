@@ -29,6 +29,9 @@
 		23411B1B22A2D89400A7D429 /* ServerEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */; };
 		23411B2022A2DD3700A7D429 /* CarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1F22A2DD3700A7D429 /* CarItemViewModel.swift */; };
 		23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2422A2DF5800A7D429 /* CarLocationViewModel.swift */; };
+		23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2B22A35B3300A7D429 /* CarMarkerView.swift */; };
+		23411B2E22A35B9B00A7D429 /* CarArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2D22A35B9B00A7D429 /* CarArtwork.swift */; };
+		23411B3022A3703C00A7D429 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 23411B2F22A3703C00A7D429 /* PublicArt.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerEnvironments.plist; sourceTree = "<group>"; };
 		23411B1F22A2DD3700A7D429 /* CarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarItemViewModel.swift; sourceTree = "<group>"; };
 		23411B2422A2DF5800A7D429 /* CarLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocationViewModel.swift; sourceTree = "<group>"; };
+		23411B2B22A35B3300A7D429 /* CarMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkerView.swift; sourceTree = "<group>"; };
+		23411B2D22A35B9B00A7D429 /* CarArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarArtwork.swift; sourceTree = "<group>"; };
+		23411B2F22A3703C00A7D429 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		23411AA822A2C45E00A7D429 /* SixtCarFinder */ = {
 			isa = PBXGroup;
 			children = (
+				23411B2F22A3703C00A7D429 /* PublicArt.json */,
 				23411AD722A2C47200A7D429 /* App */,
 				23411B2722A2E40100A7D429 /* Map */,
 				23411B1C22A2DB4200A7D429 /* Car List */,
@@ -308,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				23411AAD22A2C45E00A7D429 /* Main.storyboard */,
+				23411B2B22A35B3300A7D429 /* CarMarkerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +323,7 @@
 		23411B2922A2E5F200A7D429 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23411B2D22A35B9B00A7D429 /* CarArtwork.swift */,
 				23411B1222A2CD1F00A7D429 /* LocationData.swift */,
 				23411B1422A2CD3800A7D429 /* CarsResponse.swift */,
 			);
@@ -436,6 +445,7 @@
 			files = (
 				23411B1B22A2D89400A7D429 /* ServerEnvironments.plist in Resources */,
 				23411AB422A2C45F00A7D429 /* LaunchScreen.storyboard in Resources */,
+				23411B3022A3703C00A7D429 /* PublicArt.json in Resources */,
 				23411AB122A2C45F00A7D429 /* Assets.xcassets in Resources */,
 				23411AAF22A2C45E00A7D429 /* Main.storyboard in Resources */,
 				23411AE722A2C57400A7D429 /* CarList.storyboard in Resources */,
@@ -464,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23411B1322A2CD1F00A7D429 /* LocationData.swift in Sources */,
+				23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */,
 				23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */,
 				23411B0A22A2CC2900A7D429 /* DrawerModel.swift in Sources */,
 				23411B1122A2CD0800A7D429 /* UIWindow+Extensions.swift in Sources */,
@@ -471,6 +482,7 @@
 				23411AFF22A2C91F00A7D429 /* CarTableViewCell.swift in Sources */,
 				23411B0F22A2CCD900A7D429 /* UIView+Extensions.swift in Sources */,
 				23411B0522A2CB5D00A7D429 /* CarListViewController.swift in Sources */,
+				23411B2E22A35B9B00A7D429 /* CarArtwork.swift in Sources */,
 				23411B0D22A2CC8800A7D429 /* NetworkHandler.swift in Sources */,
 				23411B0B22A2CC2900A7D429 /* DrawerPresentationController.swift in Sources */,
 				23411B1522A2CD3800A7D429 /* CarsResponse.swift in Sources */,
