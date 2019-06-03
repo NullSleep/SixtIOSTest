@@ -21,13 +21,13 @@ This project uses Cocapods [Cocoapods](https://cocoapods.org/) for dependcy mana
 
 ## Functionality
 - Select any pin in the map to see the car information:
-![](Detail.gif)
+![](Functionality/detail.gif)
 
 - Drag up and down the Car List view. This view has three states, closed, half opened and fully opened:
-![](carList.gif)
+![](Functionality/carList.gif)
 
 - On the Map View after selecting a pin you can tap on the car image to be redirected to the Apple Maps to get directions to the car location:
-![](route.gif)
+![](Functionality/route.gif)
 
 ## Getting Started
 ### Getting the project
