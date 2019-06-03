@@ -1,6 +1,6 @@
-# Sixt iOS Test
+# Sixt Car Finder Test
 
-Car finder application. Find a nearby car by choosing your own location.
+Sixt car finder iOS test application. Find a nearby cars to rent in the Munich area.
 
 ## Technical Stack
 
@@ -9,20 +9,31 @@ Car finder application. Find a nearby car by choosing your own location.
 - Swift 5.0.1
 
 ### Dependencies
-This project uses Cocapods for dependcy managment.
+This project uses Cocapods [Cocoapods](https://cocoapods.org/) for dependcy managment.
+
 - SwiftLint - Linting of Swift code
-- AFNetworking - API Netowking
+- SDWebImage - Asynchronous image retrieval/caching
 
 ### Deployment
-- Source Control - GitHub
-- Continuous Deployment - Buddybuild
-- Hound CI - Hound
-
-### Architecture
+- Source Control - [GitHub](https://github.com/)
+- Continuous Deployment - [BuddyBuild](https://buddybuild.com/)
+- Hound CI - [Hound](https://www.houndci.com)
 
 ## Getting Started
 ### Getting the project
-· The project can be cloned from https://github.com/NullSleep/SixtIOSTest
+- The project can be cloned from https://github.com/NullSleep/SixtIOSTest
 
 ### Managing dependencies
+[Cocoapods](https://cocoapods.org/) is used for dependency management. To install dependencies:
 
+- open terminal and `cd` into root directory of project, where the `Podfile` is located.
+
+- type command:
+
+      pod install
+
+- open project
+
+      open SixtCarFinder.xcworkspace
+
+     Note, do not open the `.xcodeproj`, but always work with the `.xcworkspace` file.
