@@ -19,6 +19,16 @@ This project uses Cocapods [Cocoapods](https://cocoapods.org/) for dependcy mana
 - Continuous Deployment - [BuddyBuild](https://buddybuild.com/)
 - Hound CI - [Hound](https://www.houndci.com)
 
+## Functionality
+- Select any pin in the map to see the car information:
+![](Detail.gif)
+
+- Drag up and down the Car List view. This view has three states, closed, half opened and fully opened:
+![](carList.gif)
+
+- On the Map View after selecting a pin you can tap on the car image to be redirected to the Apple Maps to get directions to the car location:
+![](route.gif)
+
 ## Getting Started
 ### Getting the project
 - The project can be cloned from https://github.com/NullSleep/SixtIOSTest
