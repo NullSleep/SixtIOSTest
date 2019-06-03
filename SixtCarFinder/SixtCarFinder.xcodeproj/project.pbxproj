@@ -26,8 +26,6 @@
 		23411B1522A2CD3800A7D429 /* CarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1422A2CD3800A7D429 /* CarItem.swift */; };
 		23411B1722A2CD6700A7D429 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1622A2CD6700A7D429 /* NetworkError.swift */; };
 		23411B1B22A2D89400A7D429 /* ServerEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */; };
-		23411B2022A2DD3700A7D429 /* CarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B1F22A2DD3700A7D429 /* CarItemViewModel.swift */; };
-		23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2422A2DF5800A7D429 /* CarLocationViewModel.swift */; };
 		23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2B22A35B3300A7D429 /* CarMarkerView.swift */; };
 		23411B2E22A35B9B00A7D429 /* CarLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */; };
 		23411B3322A42F5300A7D429 /* TouchForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3222A42F5300A7D429 /* TouchForwardingView.swift */; };
@@ -83,8 +81,6 @@
 		23411B1422A2CD3800A7D429 /* CarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarItem.swift; sourceTree = "<group>"; };
 		23411B1622A2CD6700A7D429 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23411B1A22A2D89400A7D429 /* ServerEnvironments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerEnvironments.plist; sourceTree = "<group>"; };
-		23411B1F22A2DD3700A7D429 /* CarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarItemViewModel.swift; sourceTree = "<group>"; };
-		23411B2422A2DF5800A7D429 /* CarLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocationViewModel.swift; sourceTree = "<group>"; };
 		23411B2B22A35B3300A7D429 /* CarMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkerView.swift; sourceTree = "<group>"; };
 		23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocationAnnotation.swift; sourceTree = "<group>"; };
 		23411B3222A42F5300A7D429 /* TouchForwardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchForwardingView.swift; sourceTree = "<group>"; };
@@ -264,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				23411B1D22A2DCDA00A7D429 /* Controllers */,
-				23411B1E22A2DCFC00A7D429 /* View Models */,
 				23411B2622A2E39B00A7D429 /* Views */,
 			);
 			path = "Car List";
@@ -276,14 +271,6 @@
 				23411B0422A2CB5D00A7D429 /* CarListViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		23411B1E22A2DCFC00A7D429 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				23411B1F22A2DD3700A7D429 /* CarItemViewModel.swift */,
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		23411B2122A2DD7700A7D429 /* Controllers */ = {
@@ -303,14 +290,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		23411B2322A2DE8900A7D429 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				23411B2422A2DF5800A7D429 /* CarLocationViewModel.swift */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		23411B2622A2E39B00A7D429 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +304,6 @@
 			children = (
 				23411AE922A2C70900A7D429 /* Controller */,
 				23411B2922A2E5F200A7D429 /* Models */,
-				23411B2322A2DE8900A7D429 /* View Models */,
 				23411B2822A2E47900A7D429 /* Views */,
 			);
 			path = Map;
@@ -570,7 +548,6 @@
 			files = (
 				23411B3922A47A1300A7D429 /* LocationData.swift in Sources */,
 				23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */,
-				23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */,
 				23411B0A22A2CC2900A7D429 /* DrawerModel.swift in Sources */,
 				23411B1122A2CD0800A7D429 /* UIWindow+Extensions.swift in Sources */,
 				23411AAA22A2C45E00A7D429 /* AppDelegate.swift in Sources */,
@@ -584,7 +561,6 @@
 				23411B1522A2CD3800A7D429 /* CarItem.swift in Sources */,
 				23411B1722A2CD6700A7D429 /* NetworkError.swift in Sources */,
 				23411B0922A2CC2900A7D429 /* DrawerTransitionDelegate.swift in Sources */,
-				23411B2022A2DD3700A7D429 /* CarItemViewModel.swift in Sources */,
 				23411AED22A2C73000A7D429 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
