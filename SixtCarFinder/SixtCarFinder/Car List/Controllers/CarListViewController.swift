@@ -14,6 +14,10 @@ class CarListViewController: UIViewController {
   @IBOutlet weak var handleView: UIView!
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet var headerView: UIView!
+  
+  // MARK: - IBOutlets
+  var carList = [CarItem]()
   
   // MARK: - View life cycle
   override func viewDidLoad() {
@@ -28,7 +32,7 @@ class CarListViewController: UIViewController {
   private func setUpViews() {
     handleView.layer.cornerRadius = 2.5
     containerView.round(corners: [.topLeft, .topRight], radius: 8)
-    tableView.isUserInteractionEnabled = false
+    tableView.isUserInteractionEnabled = true
   }
 }
 
@@ -40,17 +44,24 @@ extension CarListViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return LocationData.default.count
+    return carList.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarTableViewCell else { return UITableViewCell() }
     
-    let data = LocationData.default[indexPath.row]
-    cell.titleLabel.text = data.title
-    cell.subtitleLabel.text = data.subtitle
-    cell.locationIcon.image = UIImage(named: data.imgString)!
+    let carData = carList[indexPath.row]
+    cell.configureWith(carData: carData)
+    
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    return headerView
+  }
+  
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 60
   }
 }
 
@@ -58,7 +69,7 @@ extension CarListViewController: UITableViewDataSource {
 extension CarListViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 80
+    return 150
   }
 }
 

@@ -52,6 +52,10 @@ final class DrawerPresentationController: UIPresentationController {
     animator?.isInterruptible = true
     panOnPresented = UIPanGestureRecognizer(target: self, action: #selector(userDidPan(panRecognizer:)))
     presentedView?.addGestureRecognizer(panOnPresented)
+    
+    if let carListVC = presentedViewController as? CarListViewController {
+      carListVC.headerView.addGestureRecognizer(panOnPresented)
+    }
   }
   
   override func containerViewWillLayoutSubviews() {

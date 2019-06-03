@@ -12,10 +12,12 @@ import MapKit
 class MapViewController: UIViewController {
   
   // MARK: - Class properties
-  private var carLocations: [CarLocationAnnotation] = []
   private let regionRadius: CLLocationDistance = 10000
   private let initialLocation = CLLocation(latitude: 48.1351, longitude: 11.5820)
   private let locationManager = CLLocationManager()
+  
+  private var carLocations: [CarLocationAnnotation] = []
+  private var carListViewController: CarListViewController?
   
   // MARK: - IBOutlets
   @IBOutlet weak var mapView: MKMapView!
@@ -40,14 +42,16 @@ class MapViewController: UIViewController {
     
     // Check and instantiate the CarListViewController
     let storyboard = UIStoryboard(name: "CarList", bundle: nil)
-    guard let carListViewController = storyboard.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController else { return }
+    guard let listViewController = storyboard.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController else { return }
     
     // Set the carListViewController as the drawer view and show it
-    animator = DrawerTransitionDelegate(viewControllerToPresent: carListViewController, presentingViewController: self)
-    carListViewController.transitioningDelegate = animator
-    carListViewController.modalPresentationStyle = .custom
+    animator = DrawerTransitionDelegate(viewControllerToPresent: listViewController, presentingViewController: self)
+    listViewController.transitioningDelegate = animator
+    listViewController.modalPresentationStyle = .custom
     
-    present(carListViewController, animated: true)
+    self.carListViewController = listViewController
+    
+    present(self.carListViewController!, animated: true)
     
     // Check user for location authorization status
     checkLocationAuthorizationStatus()
@@ -79,7 +83,10 @@ extension MapViewController {
     networkHandler?.getCarList(
       success: { [weak self] carList in
         guard let strongSelf = self else { return }
+        // Add the locations to the Map view and the Car List View Controller
         strongSelf.addLocationsIntoMapView(for: carList)
+        strongSelf.carListViewController?.carList = carList
+        
       }, failure: {  [weak self] error in
         guard let strongSelf = self else { return }
         let alert = UIAlertController(title: "Error downloading the car data", message: error.localizedDescription, preferredStyle: .alert)
