@@ -10,6 +10,7 @@ import Foundation
 
 public enum NetworkError: Error {
 
+  // Error cases
   case notAuthenticated
   case forbidden
   case notFound
@@ -17,6 +18,14 @@ public enum NetworkError: Error {
   case unknown(HTTPURLResponse?)
   case userCancelled
 
+  public var isAuthError: Bool {
+    switch self {
+    case .notAuthenticated: return true
+    default: return false
+    }
+  }
+
+  // MARK: - Initializers
   public init(error: Error) {
     self = .networkProblem(error)
   }
@@ -31,13 +40,6 @@ public enum NetworkError: Error {
     case NetworkError.forbidden.statusCode: self = .forbidden
     case NetworkError.notFound.statusCode: self = .notFound
     default: self = .unknown(response)
-    }
-  }
-
-  public var isAuthError: Bool {
-    switch self {
-    case .notAuthenticated: return true
-    default: return false
     }
   }
 

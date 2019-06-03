@@ -11,6 +11,8 @@ import XCTest
 
 class NetworkErrorTests: XCTestCase {
 
+  let networkHandler = NetworkHandler.shared
+
   override func setUp() {
   }
 
@@ -28,6 +30,16 @@ class NetworkErrorTests: XCTestCase {
     let netwrorkError = NetworkError(error: baseError)
     let seconDnetwrorkError = NetworkError(error: baseError)
     XCTAssertEqual(netwrorkError, seconDnetwrorkError)
+  }
+
+  func testRequestError() {
+    let url = "https://dummyurl"
+
+    networkHandler?.performGeRequest(for: URL(string: url)!, success: { _ in
+      XCTFail("Error getting the server error.")
+    }, failure: { error in
+      XCTAssertNotNil(error)
+    })
   }
 
 }

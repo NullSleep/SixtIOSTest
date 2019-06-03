@@ -9,6 +9,8 @@
 import UIKit
 
 class CarTableViewCell: UITableViewCell {
+
+  // MARK: - Cell IBoutlets
   @IBOutlet weak var locationIcon: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var ownerLabel: UILabel!
@@ -19,7 +21,8 @@ class CarTableViewCell: UITableViewCell {
   @IBOutlet weak var fuelTypeLabel: UILabel!
   @IBOutlet weak var fuelLevelLabel: UILabel!
 
-  func configureWith(carData: CarItem) {
+  // MARK: - Public methods
+  public func configureWith(carData: CarItem) {
       let url = URL(string: carData.carImageUrl ?? "")
 
       locationIcon.setImage(with: url)
@@ -34,17 +37,18 @@ class CarTableViewCell: UITableViewCell {
   }
 }
 
+// MARK: - UIImageView extension
 extension UIImageView {
-    func setImage(with url: URL?) {
-        backgroundColor = .black
-        if let imageURL = url {
-            sd_setImage(with: imageURL,
-                        placeholderImage: UIImage(named: "defaultCarImg"),
-                        options: [.scaleDownLargeImages], completed: nil)
-        } else {
-            image = UIImage(named: "defaultCarImg")
-        }
-        layer.cornerRadius = 8.0
-        layer.masksToBounds = true
+  func setImage(with url: URL?) {
+    backgroundColor = .black
+    if let imageURL = url {
+      sd_setImage(with: imageURL,
+                  placeholderImage: UIImage(named: "defaultCarImg"),
+                  options: [.scaleDownLargeImages], completed: nil)
+    } else {
+      image = UIImage(named: "defaultCarImg")
     }
+    layer.cornerRadius = 8.0
+    layer.masksToBounds = true
+  }
 }

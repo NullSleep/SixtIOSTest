@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
 
   // MARK: - Class properties
   private let regionRadius: CLLocationDistance = 10000
+  // Set initial location in the city of Munich
   private let initialLocation = CLLocation(latitude: 48.1351, longitude: 11.5820)
   private let locationManager = CLLocationManager()
 
@@ -63,14 +64,18 @@ class MapViewController: UIViewController {
 // MARK: - Private methods
 extension MapViewController {
 
+  /// Centers the map view, sets its delegate and registers the default annotation.
   private func configureMapView() {
-    // Set initial location in Munich
     centerMapOnLocation(location: initialLocation)
+
     mapView.delegate = self
     mapView.register(CarMarkerView.self,
                      forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
   }
 
+  /// Centers the Map view in a give location and radius
+  ///
+  /// - Parameter location: The coordinate where to center the Map View
   private func centerMapOnLocation(location: CLLocation) {
     let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                               latitudinalMeters: regionRadius,
@@ -78,12 +83,7 @@ extension MapViewController {
     mapView.setRegion(coordinateRegion, animated: true)
   }
 
-  private func addLocationsIntoMapView(for carList: [CarItem]) {
-    let locations = carList.compactMap { CarLocationAnnotation(for: $0) }
-    carLocations.append(contentsOf: locations)
-    mapView.addAnnotations(carLocations)
-  }
-
+  // Makes the request to get the car list the add the car locations to the Map View and Car List View.
   private func loadCarList() {
     networkHandler?.getCarList(
       success: { [weak self] carList in
@@ -94,12 +94,22 @@ extension MapViewController {
 
       }, failure: {  [weak self] error in
         guard let strongSelf = self else { return }
+
         let alert = UIAlertController(title: "Error downloading the car data",
                                       message: error.localizedDescription,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
-        strongSelf.present(alert, animated: true, completion: nil)
+        strongSelf.carListViewController?.present(alert, animated: true, completion: nil)
     })
+  }
+
+  /// Adds all the car locations annotations to the Map View
+  ///
+  /// - Parameter carList: Contains the full list of cars from the requests
+  private func addLocationsIntoMapView(for carList: [CarItem]) {
+    let locations = carList.compactMap { CarLocationAnnotation(for: $0) }
+    carLocations.append(contentsOf: locations)
+    mapView.addAnnotations(carLocations)
   }
 }
 

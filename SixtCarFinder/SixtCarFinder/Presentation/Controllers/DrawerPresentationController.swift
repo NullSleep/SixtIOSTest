@@ -66,7 +66,6 @@ final class DrawerPresentationController: UIPresentationController {
   }
 
   // MARK: - Private functions
-
   @objc private func userDidPan(panRecognizer: UIPanGestureRecognizer) {
     let translationPoint = panRecognizer.translation(in: presentedView)
     let currentOriginY = draggablePosition.originY(for: maxFrame.height)
@@ -104,6 +103,9 @@ final class DrawerPresentationController: UIPresentationController {
     }
   }
 
+  /// Determines the type of animation to be done five the dragoffset
+  ///
+  /// - Parameter dragOffset: Value to determine the distance from the bottom of the Drawer view
   private func animate(_ dragOffset: CGFloat) {
     let distanceFromBottom = maxFrame.height - dragOffset
 
@@ -127,6 +129,9 @@ final class DrawerPresentationController: UIPresentationController {
     }
   }
 
+  /// Animates the drawer view to a given position
+  ///
+  /// - Parameter position: indicates where to animate the drawer view
   private func animate(to position: DraggablePosition) {
     guard let animator = animator else { return }
 

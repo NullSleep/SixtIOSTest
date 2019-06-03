@@ -62,7 +62,7 @@ public final class NetworkHandler {
   }
 
   // MARK: - Requests execution
-  private  func performGeRequest(
+  public func performGeRequest(
     for url: URL, success: @escaping ([CarItem]) -> Void, failure: @escaping (NetworkError) -> Void) {
 
     let success: ([CarItem]) -> Void = { cars in
