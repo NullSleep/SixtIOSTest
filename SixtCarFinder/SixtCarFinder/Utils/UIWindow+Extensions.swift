@@ -9,16 +9,17 @@
 import UIKit
 
 extension UIWindow {
-  
+
   @objc public class var root: UIWindow {
     guard let optionalRootWindow = UIApplication.shared.delegate?.window,
       let rootWindow = optionalRootWindow else { fatalError("Fatal Error: delegate's window is nil!") }
     return rootWindow
   }
-  
+
   public class var key: UIWindow {
-    guard let keyWindow = UIApplication.shared.keyWindow else { fatalError("Fatal Error: now window is set to keyWindow") }
+    guard let keyWindow = UIApplication.shared.keyWindow else {
+      fatalError("Fatal Error: now window is set to keyWindow")
+    }
     return keyWindow
   }
 }
-

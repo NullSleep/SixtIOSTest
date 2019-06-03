@@ -11,14 +11,14 @@ import UIKit
 final class DrawerTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
   private let vcToPresent: UIViewController
   private weak var presentingVC: UIViewController?
-  
+
   init(viewControllerToPresent: UIViewController, presentingViewController: UIViewController) {
     self.vcToPresent = viewControllerToPresent
     self.presentingVC = presentingViewController
   }
-  
-  func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+
+  func presentationController(forPresented presented: UIViewController,
+                              presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
     return DrawerPresentationController(presentedViewController: presented, presenting: presenting)
   }
 }
-

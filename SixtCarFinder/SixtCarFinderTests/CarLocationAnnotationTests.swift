@@ -12,13 +12,13 @@ import XCTest
 class CarLocationAnnotationTests: XCTestCase {
 
   let networkHandler = NetworkHandler.shared
-  
+
   override func setUp() {
   }
-  
+
   override func tearDown() {
   }
-  
+
   func testCarLocationAnnotationtObjectMapping() {
     guard let jsonFile = Bundle.main.path(forResource: "Resources/SixtCarListResponse", ofType: "json") else { return }
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile), options: []) else { return }
@@ -34,7 +34,7 @@ class CarLocationAnnotationTests: XCTestCase {
       XCTFail("Error getting the car items.")
     }
   }
-  
+
   func testCarLocationAnnotationtCoordinate() {
     guard let jsonFile = Bundle.main.path(forResource: "Resources/SixtCarListResponse", ofType: "json") else { return }
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile), options: []) else { return }
@@ -50,7 +50,7 @@ class CarLocationAnnotationTests: XCTestCase {
       XCTFail("Error getting the car items.")
     }
   }
-  
+
   func testCarLocationAnnotationtCarInfo() {
     guard let jsonFile = Bundle.main.path(forResource: "Resources/SixtCarListResponse", ofType: "json") else { return }
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile), options: []) else { return }

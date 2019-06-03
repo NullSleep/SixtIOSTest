@@ -1,4 +1,4 @@
-  //
+//
 //  SixtCarFinderUITests.swift
 //  SixtCarFinderUITests
 //
@@ -17,6 +17,5 @@ class SixtCarFinderUITests: XCTestCase {
 
     override func tearDown() {
     }
-
 
 }

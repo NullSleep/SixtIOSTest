@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-  
+
   func round(corners: UIRectCorner, radius: CGFloat) {
     let path = UIBezierPath(roundedRect: bounds,
                             byRoundingCorners: corners,
@@ -19,4 +19,3 @@ extension UIView {
     layer.mask = mask
   }
 }
-

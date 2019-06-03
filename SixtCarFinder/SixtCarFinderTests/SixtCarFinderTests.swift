@@ -13,24 +13,24 @@ class SixtCarFinders: XCTestCase {
 
   override func setUp() {
   }
-  
+
   override func tearDown() {
   }
-  
+
   func testMapScreen() {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
     XCTAssertNotNil(sb, "Could not instantiate storyboard for Settings View creation")
-    let vc = sb.instantiateViewController(withIdentifier: "MapVC") as? MapViewController
-    XCTAssertNotNil(vc, "Could not instantiate Settings view controller")
-    _ = vc?.view
+    let viewcontroller = storyboard.instantiateViewController(withIdentifier: "MapVC") as? MapViewController
+    XCTAssertNotNil(viewcontroller, "Could not instantiate Settings view controller")
+    _ = viewcontroller?.view
   }
-  
+
   func testCarListScreen() {
-    let sb = UIStoryboard(name: "CarList", bundle: nil)
+    let storyboard = UIStoryboard(name: "CarList", bundle: nil)
     XCTAssertNotNil(sb, "Could not instantiate storyboard for Settings View creation")
-    let vc = sb.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController
+    let viewcontroller = storyboard.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController
     XCTAssertNotNil(vc, "Could not instantiate Settings view controller")
-    _ = vc?.view
+    _ = viewcontroller?.view
   }
 
 }

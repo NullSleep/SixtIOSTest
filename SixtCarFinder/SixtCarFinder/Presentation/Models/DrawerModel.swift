@@ -5,6 +5,7 @@
 //  Created by Carlos Arenas on 5/31/19.
 //  Copyright © 2019 CA. All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 import UIKit
 
@@ -28,7 +29,7 @@ enum DraggablePosition {
   case collapsed
   case half
   case open
-  
+
   var heightMultiplier: CGFloat {
     switch self {
     case .collapsed: return 0.2
@@ -36,7 +37,7 @@ enum DraggablePosition {
     case .open: return 1
     }
   }
-  
+
   var downBoundary: CGFloat {
     switch self {
     case .collapsed: return 0.0
@@ -44,7 +45,7 @@ enum DraggablePosition {
     case .open: return 0.8
     }
   }
-  
+
   var upBoundary: CGFloat {
     switch self {
     case .collapsed: return 0.0
@@ -52,14 +53,14 @@ enum DraggablePosition {
     case .open: return 0.65
     }
   }
-  
+
   var dimAlpha: CGFloat {
     switch self {
     case .collapsed, .half: return 0.0
     case .open: return 0.45
     }
   }
-  
+
   func nextPosition(for direction: DragDirection) -> DraggablePosition {
     switch (self, direction) {
     case (.collapsed, .up): return .half
@@ -70,7 +71,7 @@ enum DraggablePosition {
     case (.open, .down): return .half
     }
   }
-  
+
   func originY(for maxHeight: CGFloat) -> CGFloat {
     return maxHeight - (maxHeight * heightMultiplier)
   }

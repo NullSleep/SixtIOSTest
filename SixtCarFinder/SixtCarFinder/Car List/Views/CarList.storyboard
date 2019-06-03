@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c39-ea-yMz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="529"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CarCell" rowHeight="150" id="d8k-Id-V3Q" customClass="CarTableViewCell" customModule="SixtCarFinder" customModuleProvider="target">
@@ -215,7 +215,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ERe-m3-bab" firstAttribute="bottom" secondItem="sZz-iM-O9f" secondAttribute="bottom" id="25o-4l-nOX"/>
-                            <constraint firstAttribute="bottom" secondItem="c39-ea-yMz" secondAttribute="bottom" id="9n6-C1-oSB"/>
+                            <constraint firstAttribute="bottom" secondItem="c39-ea-yMz" secondAttribute="bottom" constant="74" id="9n6-C1-oSB"/>
                             <constraint firstItem="sZz-iM-O9f" firstAttribute="top" secondItem="BNl-t4-rCU" secondAttribute="bottom" constant="-15" id="KI6-cA-5zM"/>
                             <constraint firstItem="c39-ea-yMz" firstAttribute="leading" secondItem="ERe-m3-bab" secondAttribute="leading" id="LRe-eJ-DF8"/>
                             <constraint firstItem="sZz-iM-O9f" firstAttribute="centerX" secondItem="ERe-m3-bab" secondAttribute="centerX" id="MPY-2v-gOc"/>

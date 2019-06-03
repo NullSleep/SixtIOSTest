@@ -11,14 +11,14 @@ import MapKit
 import SDWebImage
 
 class CarMarkerView: MKAnnotationView {
-  
+
   override var annotation: MKAnnotation? {
     willSet {
       guard let carLocation = newValue as? CarLocationAnnotation else {return}
       // Callout
       canShowCallout = true
       calloutOffset = CGPoint(x: 0, y: 5)
-      
+
       // Car image button configuration
       let carImageButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 135, height: 90)))
       carImageButton.backgroundColor = .black
@@ -32,10 +32,10 @@ class CarMarkerView: MKAnnotationView {
       carImageButton.layer.cornerRadius = 8.0
       carImageButton.layer.masksToBounds = false
       rightCalloutAccessoryView = carImageButton
-      
+
       // Annotation image
       image = UIImage(named: "carIconSmall")
-      
+
       // Anotation detail label
       let carInfoText = "Owner: " + carLocation.carInfo.ownerName + "\n"
         + "Maker: " + carLocation.carInfo.make + "\n"
@@ -43,7 +43,7 @@ class CarMarkerView: MKAnnotationView {
         + "Fuel Level: " + carLocation.carInfo.carFuelPercentage + "\n"
         + "Transmission: " + carLocation.carInfo.carTransmission + "\n"
         + "Cleanliness: " + carLocation.carInfo.carCleanliness
-      
+
       let detailLabel = UILabel()
       detailLabel.numberOfLines = 0
       detailLabel.font = detailLabel.font.withSize(13)
@@ -51,5 +51,5 @@ class CarMarkerView: MKAnnotationView {
       detailCalloutAccessoryView = detailLabel
     }
   }
-  
+
 }

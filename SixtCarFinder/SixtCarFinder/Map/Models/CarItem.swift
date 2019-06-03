@@ -5,12 +5,14 @@
 //  Created by Carlos Arenas on 5/31/19.
 //  Copyright © 2019 CA. All rights reserved.
 //
+// swiftlint:disable colon
+// swiftlint:disable identifier_name
 
 import Foundation
 import UIKit
 
 public struct CarItem: Codable {
-  
+
   // CarItem struct properties
   let id               : String
   let modelIdentifier  : String
@@ -28,7 +30,7 @@ public struct CarItem: Codable {
   let longitude        : Double
   let innerCleanliness : String
   let carImageUrl      : String?
-  
+
   enum CodingKeys: String, CodingKey {
     case id
     case modelIdentifier
@@ -47,9 +49,9 @@ public struct CarItem: Codable {
     case innerCleanliness
     case carImageUrl
   }
-  
+
   // UIColor represnetation of the given car color
-  var carColor: UIColor  {
+  var carColor: UIColor {
     switch color {
     case "midnight_black", "midnight_black_metal", "absolute_black_metal":
       return .black
@@ -63,14 +65,14 @@ public struct CarItem: Codable {
       return .orange
     }
   }
-  
+
   // String represnetation of the given car fuel in percentage form
-  var carFuelPercentage: String  {
+  var carFuelPercentage: String {
     return String(fuelLevel * 100) + "%"
   }
-  
+
   // String represnetation of the given car transmission
-  var carTransmission: String  {
+  var carTransmission: String {
     switch transmission {
     case "M":
       return "Manual"
@@ -80,7 +82,7 @@ public struct CarItem: Codable {
       return "Not specified"
     }
   }
-  
+
   // Processing the cleanliness value of a car
   var carCleanliness: String {
     let newString = innerCleanliness.replacingOccurrences(of: "_", with: " ", options: .literal, range: nil)

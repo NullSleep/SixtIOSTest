@@ -18,10 +18,10 @@ class CarTableViewCell: UITableViewCell {
   @IBOutlet weak var licensePlateLabel: UILabel!
   @IBOutlet weak var fuelTypeLabel: UILabel!
   @IBOutlet weak var fuelLevelLabel: UILabel!
-  
+
   func configureWith(carData: CarItem) {
       let url = URL(string: carData.carImageUrl ?? "")
-    
+
       locationIcon.setImage(with: url)
       titleLabel.text = carData.modelName
       ownerLabel.text = carData.ownerName
@@ -38,7 +38,9 @@ extension UIImageView {
     func setImage(with url: URL?) {
         backgroundColor = .black
         if let imageURL = url {
-            sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultCarImg"), options: [.scaleDownLargeImages], completed: nil)
+            sd_setImage(with: imageURL,
+                        placeholderImage: UIImage(named: "defaultCarImg"),
+                        options: [.scaleDownLargeImages], completed: nil)
         } else {
             image = UIImage(named: "defaultCarImg")
         }
@@ -46,4 +48,3 @@ extension UIImageView {
         layer.masksToBounds = true
     }
 }
-

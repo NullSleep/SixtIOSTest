@@ -13,15 +13,16 @@ class NetworkErrorTests: XCTestCase {
 
   override func setUp() {
   }
-  
+
   override func tearDown() {
   }
-  
+
   func testBaseError() {
     let netwrorkError = NetworkError(error: CustomError(message: "Fatal error"))
-    XCTAssertEqual(netwrorkError.localizedDescription, "The operation couldn’t be completed. (SixtCarFinder.NetworkError error 0.)")
+    XCTAssertEqual(netwrorkError.localizedDescription,
+                   "The operation couldn’t be completed. (SixtCarFinder.NetworkError error 0.)")
   }
-  
+
   func testErrorEquatable() {
     let baseError = CustomError(message: "Fatal error")
     let netwrorkError = NetworkError(error: baseError)
