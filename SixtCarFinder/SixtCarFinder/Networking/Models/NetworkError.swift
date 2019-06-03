@@ -13,7 +13,6 @@ public enum NetworkError: Error {
   case notAuthenticated
   case forbidden
   case notFound
-  
   case networkProblem(Error)
   case unknown(HTTPURLResponse?)
   case userCancelled
@@ -44,12 +43,12 @@ public enum NetworkError: Error {
   
   public var statusCode: Int {
     switch self {
-    case .notAuthenticated: return 401
-    case .forbidden:        return 403
-    case .notFound:         return 404
+    case .notAuthenticated:  return 401
+    case .forbidden:         return 403
+    case .notFound:          return 404
     case .networkProblem(_): return 10001
     case .unknown(_):        return 10002
-    case .userCancelled:  return 99999
+    case .userCancelled:     return 99999
     }
   }
 }
@@ -59,4 +58,10 @@ extension NetworkError: Equatable {
   public static func ==(lhs: NetworkError, rhs: NetworkError) -> Bool {
     return lhs.statusCode == rhs.statusCode
   }
+}
+
+// MARK: - Custom Error
+public struct CustomError: Error {
+  let message: String
+  
 }

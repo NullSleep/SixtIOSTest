@@ -38,13 +38,16 @@ class MapViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    guard let locationsViewController = UIStoryboard(name: "CarList", bundle: nil).instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController else { return }
+    // Check and instantiate the CarListViewController
+    let storyboard = UIStoryboard(name: "CarList", bundle: nil)
+    guard let carListViewController = storyboard.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController else { return }
     
-    animator = DrawerTransitionDelegate(viewControllerToPresent: locationsViewController, presentingViewController: self)
-    locationsViewController.transitioningDelegate = animator
-    locationsViewController.modalPresentationStyle = .custom
+    // Set the carListViewController as the drawer view and show it
+    animator = DrawerTransitionDelegate(viewControllerToPresent: carListViewController, presentingViewController: self)
+    carListViewController.transitioningDelegate = animator
+    carListViewController.modalPresentationStyle = .custom
     
-    present(locationsViewController, animated: true)
+    present(carListViewController, animated: true)
     
     // Check user for location authorization status
     checkLocationAuthorizationStatus()
@@ -61,28 +64,27 @@ extension MapViewController {
     mapView.register(CarMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
   }
   
-  func centerMapOnLocation(location: CLLocation) {
+  private func centerMapOnLocation(location: CLLocation) {
     let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
     mapView.setRegion(coordinateRegion, animated: true)
   }
   
-  func addLocationsIntoMapView(for carList: [CarItem]) {
+  private func addLocationsIntoMapView(for carList: [CarItem]) {
     let locations = carList.compactMap { CarLocationAnnotation(for: $0) }
     carLocations.append(contentsOf: locations)
     mapView.addAnnotations(carLocations)
   }
   
   private func loadCarList() {
-    networkHandler.getCarList(
+    networkHandler?.getCarList(
       success: { [weak self] carList in
-        
         guard let strongSelf = self else { return }
         strongSelf.addLocationsIntoMapView(for: carList)
-        print("\(carList)")
-        
-      }, failure: { [weak self] error in
-        print("Car list download failed: \(error)")
-        //guard let strongSelf = self else { return }
+      }, failure: {  [weak self] error in
+        guard let strongSelf = self else { return }
+        let alert = UIAlertController(title: "Error downloading the car data", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in } ))
+        strongSelf.present(alert, animated: true, completion: nil)
     })
   }
 }

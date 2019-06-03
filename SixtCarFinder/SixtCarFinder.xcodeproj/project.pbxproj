@@ -31,6 +31,11 @@
 		23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2B22A35B3300A7D429 /* CarMarkerView.swift */; };
 		23411B2E22A35B9B00A7D429 /* CarLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */; };
 		23411B3322A42F5300A7D429 /* TouchForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3222A42F5300A7D429 /* TouchForwardingView.swift */; };
+		23411B3722A476D300A7D429 /* NetworkingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3622A476D300A7D429 /* NetworkingHandlerTests.swift */; };
+		23411B3922A47A1300A7D429 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3822A47A1300A7D429 /* LocationData.swift */; };
+		23411B3B22A48F8600A7D429 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3A22A48F8600A7D429 /* NetworkErrorTests.swift */; };
+		23411B3F22A4A67C00A7D429 /* CarIModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23411B3E22A4A67C00A7D429 /* CarIModelTests.swift */; };
+		23411B4122A4A97800A7D429 /* DummyCarListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 23411B4022A4A97700A7D429 /* DummyCarListResponse.json */; };
 		670151C21FCD1A88B4973AE5 /* Pods_SixtCarFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A18B28796879A0774EBD10 /* Pods_SixtCarFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +89,11 @@
 		23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocationAnnotation.swift; sourceTree = "<group>"; };
 		23411B3222A42F5300A7D429 /* TouchForwardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchForwardingView.swift; sourceTree = "<group>"; };
 		23411B3422A45A1300A7D429 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		23411B3622A476D300A7D429 /* NetworkingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHandlerTests.swift; sourceTree = "<group>"; };
+		23411B3822A47A1300A7D429 /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		23411B3A22A48F8600A7D429 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		23411B3E22A4A67C00A7D429 /* CarIModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarIModelTests.swift; sourceTree = "<group>"; };
+		23411B4022A4A97700A7D429 /* DummyCarListResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyCarListResponse.json; sourceTree = "<group>"; };
 		845FE675927F781F1D1150BB /* Pods-SixtCarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCarFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder.release.xcconfig"; sourceTree = "<group>"; };
 		D62897FAD42FD60638AE741E /* Pods-SixtCarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCarFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtCarFinder/Pods-SixtCarFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +162,11 @@
 		23411ABD22A2C45F00A7D429 /* SixtCarFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				23411B4222A4A97A00A7D429 /* Resources */,
 				23411ABE22A2C45F00A7D429 /* SixtCarFinderTests.swift */,
+				23411B3622A476D300A7D429 /* NetworkingHandlerTests.swift */,
+				23411B3A22A48F8600A7D429 /* NetworkErrorTests.swift */,
+				23411B3E22A4A67C00A7D429 /* CarIModelTests.swift */,
 				23411AC022A2C45F00A7D429 /* Info.plist */,
 			);
 			path = SixtCarFinderTests;
@@ -329,6 +343,7 @@
 		23411B2922A2E5F200A7D429 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23411B3822A47A1300A7D429 /* LocationData.swift */,
 				23411B2D22A35B9B00A7D429 /* CarLocationAnnotation.swift */,
 				23411B1422A2CD3800A7D429 /* CarItem.swift */,
 			);
@@ -350,6 +365,14 @@
 				23411B3222A42F5300A7D429 /* TouchForwardingView.swift */,
 			);
 			path = Veiws;
+			sourceTree = "<group>";
+		};
+		23411B4222A4A97A00A7D429 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23411B4022A4A97700A7D429 /* DummyCarListResponse.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5E55431C87437928856CF419 /* Pods */ = {
@@ -488,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23411B4122A4A97800A7D429 /* DummyCarListResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23411B3922A47A1300A7D429 /* LocationData.swift in Sources */,
 				23411B2C22A35B3300A7D429 /* CarMarkerView.swift in Sources */,
 				23411B2522A2DF5800A7D429 /* CarLocationViewModel.swift in Sources */,
 				23411B0A22A2CC2900A7D429 /* DrawerModel.swift in Sources */,
@@ -568,7 +593,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23411B3722A476D300A7D429 /* NetworkingHandlerTests.swift in Sources */,
 				23411ABF22A2C45F00A7D429 /* SixtCarFinderTests.swift in Sources */,
+				23411B3F22A4A67C00A7D429 /* CarIModelTests.swift in Sources */,
+				23411B3B22A48F8600A7D429 /* NetworkErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

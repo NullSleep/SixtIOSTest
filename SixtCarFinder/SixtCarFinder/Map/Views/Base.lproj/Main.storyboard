@@ -13,7 +13,7 @@
         <!--Map View Controller-->
         <scene sceneID="xI1-HQ-3ss">
             <objects>
-                <viewController id="0Fo-po-FES" customClass="MapViewController" customModule="SixtCarFinderTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" id="0Fo-po-FES" customClass="MapViewController" customModule="SixtCarFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q23-Va-imG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

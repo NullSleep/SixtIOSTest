@@ -34,6 +34,7 @@ final class DrawerPresentationController: UIPresentationController {
     return presentedFrame
   }
   
+  // MARK: - UIPresentationController
   override func presentationTransitionWillBegin() {
     guard let containerView = containerView else { return }
     
@@ -57,6 +58,7 @@ final class DrawerPresentationController: UIPresentationController {
     presentedView?.frame = frameOfPresentedViewInContainerView
   }
   
+  // MARK: - Private functions
   @objc private func userDidPan(panRecognizer: UIPanGestureRecognizer) {
     let translationPoint = panRecognizer.translation(in: presentedView)
     let currentOriginY = draggablePosition.originY(for: maxFrame.height)

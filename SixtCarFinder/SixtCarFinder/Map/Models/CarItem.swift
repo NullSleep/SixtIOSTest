@@ -82,7 +82,7 @@ public struct CarItem: Codable {
   }
   
   // Processing the cleanliness value of a car
-  var cleanliness: String {
+  var carCleanliness: String {
     let newString = innerCleanliness.replacingOccurrences(of: "_", with: " ", options: .literal, range: nil)
     return newString.capitalized
   }

@@ -11,24 +11,26 @@ import XCTest
 
 class SixtCarFinders: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+  override func setUp() {
+  }
+  
+  override func tearDown() {
+  }
+  
+  func testMapScreen() {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    XCTAssertNotNil(sb, "Could not instantiate storyboard for Settings View creation")
+    let vc = sb.instantiateViewController(withIdentifier: "MapVC") as? MapViewController
+    XCTAssertNotNil(vc, "Could not instantiate Settings view controller")
+    _ = vc?.view
+  }
+  
+  func testCarListScreen() {
+    let sb = UIStoryboard(name: "CarList", bundle: nil)
+    XCTAssertNotNil(sb, "Could not instantiate storyboard for Settings View creation")
+    let vc = sb.instantiateViewController(withIdentifier: "CarListVC") as? CarListViewController
+    XCTAssertNotNil(vc, "Could not instantiate Settings view controller")
+    _ = vc?.view
+  }
 
 }
