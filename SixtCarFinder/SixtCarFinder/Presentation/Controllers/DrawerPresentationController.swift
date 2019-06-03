@@ -15,7 +15,8 @@ final class DrawerPresentationController: UIPresentationController {
   private var dimmingView = UIView()
   private var draggablePosition: DraggablePosition = .collapsed
   
-  private let springTiming = UISpringTimingParameters(dampingRatio: .springDampingRatio, initialVelocity: CGVector(dx: 0, dy: .springInitialVelocityY))
+  private let springTiming = UISpringTimingParameters(dampingRatio: .springDampingRatio,
+                                                      initialVelocity: CGVector(dx: 0, dy: .springInitialVelocityY))
   private var animator: UIViewPropertyAnimator?
   
   private var dragDirection: DragDirection = .up
@@ -63,6 +64,7 @@ final class DrawerPresentationController: UIPresentationController {
   }
   
   // MARK: - Private functions
+  
   @objc private func userDidPan(panRecognizer: UIPanGestureRecognizer) {
     let translationPoint = panRecognizer.translation(in: presentedView)
     let currentOriginY = draggablePosition.originY(for: maxFrame.height)

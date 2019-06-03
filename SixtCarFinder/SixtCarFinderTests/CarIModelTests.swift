@@ -24,7 +24,7 @@ class CarIModelTests: XCTestCase {
     guard let jsonFile = Bundle.main.path(forResource: "Resources/SixtCarListResponse", ofType: "json") else { return }
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile), options: []) else { return }
     do {
-      let carItems = try [JSONDecoder().decode([CarItem].self, from: data)]
+      let carItems = try JSONDecoder().decode([CarItem].self, from: data)
       XCTAssertNotNil(carItems)
     } catch {
       XCTFail("Error getting the car items.")
